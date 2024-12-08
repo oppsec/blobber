@@ -1,0 +1,29 @@
+[project]
+name = "blobber"
+version = "1.0.0"
+authors = [{ name = "oppsec", email = "opps3c@gmail.com" }]
+description = "Blobber is a tool to enumerate information and files from Azure Blob Storage Services"
+readme = "README.md"
+keywords = ["python3", "red team", "azure", "blob", "pentest"]
+
+classifiers = [
+    'Environment :: Console',
+    'License :: OSI Approved :: BSD License',
+    'Programming Language :: Python :: 3',
+    'Topic :: Security',
+]
+
+dependencies = ['rich>=13.5.3', 'requests>=2.32.3', 'lxml>=5.3.0']
+
+license = { file = "LICENSE" }
+
+[project.urls]
+Homepage = "https://github.com/oppsec/blobber"
+Issues = "https://github.com/oppsec/blobber/issues"
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project.scripts]
+blobber = "blobber.main:initialize"
